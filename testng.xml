@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners><listener class-name="seleniumTest.reports.TestListeners"></listener>
+
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Listeners">
+        <classes>
+            <class name="seleniumTest.testCases.LoginValidationTests">
+                <methods>
+                    <include name="loginSuccessTest"/>
+                    <include name="verifyLoginWithInvalidEmail"/>
+                    <include name="verifyLoginWithBlankEmail"/>
+                    <include name="verifyLoginWithInvalidPassword"/>
+                </methods>
+            </class>
+            <class name="seleniumTest.testCases.SearchValidationTests">
+                <methods>
+                    <include name="verifyPaging"/>
+                    <include name="verifySortByOption"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
